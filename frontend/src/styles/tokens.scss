@@ -1,0 +1,95 @@
+// ---------------------------------------------------------------
+// NXT Pay design tokens
+//
+// Concept: a customer looking at this app is, in effect, looking
+// at their meter. The palette reads as "stored daylight spent
+// after dark" — a deep night-grid ink with a single warm solar
+// accent — and numbers that matter (balances, amounts, units)
+// are always set in a tabular mono face, like a physical digital
+// meter readout, never in the UI sans.
+// ---------------------------------------------------------------
+
+:root {
+  // Core palette
+  --nxt-ink: #14213d;      // deep indigo-navy — text, dark surfaces
+  --nxt-ink-soft: #2c3a5e; // secondary ink, borders on dark
+  --nxt-paper: #f7f4ec;    // warm paper — light surfaces
+  --nxt-paper-dim: #eee8d9;// recessed panels on paper
+  --nxt-amber: #f2a93c;    // solar accent — primary action / energy
+  --nxt-amber-deep: #c9821f;
+  --nxt-teal: #1f7a5c;     // grid-connected / success
+  --nxt-teal-soft: #e4f1ec;
+  --nxt-brick: #c24b3f;    // errors / disconnected
+  --nxt-brick-soft: #f6e6e3;
+
+  // Text on paper
+  --text-primary: var(--nxt-ink);
+  --text-secondary: #5b6478;
+  --text-muted: #8a8f9e;
+  --text-on-ink: #f7f4ec;
+  --text-on-ink-muted: #aab2c8;
+
+  // Surfaces
+  --surface-app: var(--nxt-paper);
+  --surface-raised: #ffffff;
+  --surface-sunken: var(--nxt-paper-dim);
+  --surface-ink: var(--nxt-ink);
+
+  // Borders
+  --hairline: rgba(20, 33, 61, 0.12);
+  --hairline-on-ink: rgba(247, 244, 236, 0.16);
+
+  // Type
+  --font-ui: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-meter: 'IBM Plex Mono', 'SFMono-Regular', ui-monospace, monospace;
+
+  --step--1: 0.8125rem;
+  --step-0: 0.9375rem;
+  --step-1: 1.125rem;
+  --step-2: 1.375rem;
+  --step-3: 1.75rem;
+  --step-4: 2.25rem;
+  --step-5: 2.875rem;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-raised: 0 1px 2px rgba(20, 33, 61, 0.06), 0 8px 24px -12px rgba(20, 33, 61, 0.18);
+
+  --motion-fast: 140ms;
+  --motion-base: 220ms;
+  --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --surface-app: var(--nxt-ink);
+    --surface-raised: #1b2949;
+    --surface-sunken: #101a33;
+    --text-primary: var(--text-on-ink);
+    --text-secondary: var(--text-on-ink-muted);
+    --text-muted: #7c86a3;
+    --hairline: var(--hairline-on-ink);
+  }
+}
+
+:root[data-theme='dark'] {
+  --surface-app: var(--nxt-ink);
+  --surface-raised: #1b2949;
+  --surface-sunken: #101a33;
+  --text-primary: var(--text-on-ink);
+  --text-secondary: var(--text-on-ink-muted);
+  --text-muted: #7c86a3;
+  --hairline: var(--hairline-on-ink);
+}

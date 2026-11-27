@@ -1,0 +1,38 @@
+{
+  "name": "nxt-pay",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Redesigned customer-facing top-up PWA for the NXT mini-grid platform.",
+  "homepage": "https://github.com/dnyftech/nxt-pay#readme",
+  "bugs": {
+    "url": "https://github.com/dnyftech/nxt-pay/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnyftech/nxt-pay.git"
+  },
+  "license": "ISC",
+  "author": "dnyftech",
+  "type": "module",
+  "main": "vite.config.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "ky": "^1.7.2",
+    "pinia": "^2.2.2",
+    "pinia-plugin-persistedstate": "^4.1.1",
+    "vue": "^3.4.38",
+    "vue-router": "^4.4.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.3",
+    "sass": "^1.78.0",
+    "vite": "^5.4.3",
+    "vite-plugin-pwa": "^0.20.5"
+  }
+}
