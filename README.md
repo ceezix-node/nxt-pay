@@ -51,3 +51,4 @@ The backend currently includes a health endpoint and Supabase access-token authe
 
 Financial endpoints and electricity-provider integration are not yet implemented.
 # nxt-pay
+# nxt-pay
